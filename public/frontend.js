@@ -5,6 +5,7 @@ var mouse_down = false;
 var past;
 var current;
 var server = io();
+var color = 'blue';
 
 server.on('connect', function(socket){
   console.log('Connected');
@@ -37,6 +38,7 @@ canvas.addEventListener('mousemove', function(event){
     current = [event.offsetX, event.offsetY];
     console.log('move', event.offsetX, event.offsetY);
     if (past){
+      ctx.fillStyle = color;
       server.emit('draw-line',{past: past, current: current});
       //draw(past,current);
     }
