@@ -2,27 +2,26 @@
 <html>
   <head>
     <title> Draw App </title>
-    <style>
-      body{
-        margin: 0;
-        padding: 0;
-      }
-      canvas{
-        border: 1px solid black;
-        margin-left:30%;
-      }
-      #left{
-        margin-left: 40%;
-      }
-    </style>
-
+    <script src="../static/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="../static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/stylesheet.css">
   </head>
   <body>
-    <h1 id="left">Draw App </h1>
-    <canvas width="500" height="500"></canvas>
-    <br><br>
-    <button id="left">Blue</button> <button>White</button> <button>Red</button>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="static/frontend.js"></script>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <h1 class="text-center">Draw App </h1>
+          <canvas width="500" height="500"></canvas>
+          <br><br>
+          <div class="text-center">
+            <button type="button" class="btn" id="red">Red</button>
+            <button type="button"  class="btn" id="blue">Blue</button>
+            <button type="button"  class="btn" id="green">Green</button>
+          </div>
+          <script src="/socket.io/socket.io.js"></script>
+          <script src="static/frontend.js"></script>
+        </div>
+      </div>
+  </div>
   </body>
 </html>
